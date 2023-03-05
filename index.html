@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <h1>Study from ZZZZero</h1>
   <div>
     <a href="/study/helloWorld.html">Hello world</a>
+    <a href="/study/coord_and_context.html">coord_and_context</a>
+    <a href="/study/line_effect.html">line_effect.html</a>
+
+  </div>
+  <div>
+    <h3>Play: Background</h3>
+    <p>
+      The API is inspired by GLSL programming/rasterisation: instead of thinking in geometric primitives painted on a canvas this approach enforces to write a single function which will be invoked against each cell, an approach not so different from fragment shaders.
+      If the number of “fragment” operations is low common shader techniques can be used even in (comparably slow) JavaScript: a maximised browser window on a typical laptop screen holds about 5-8000 monospaced characters. Even a low performing computer can do enough computation on this amount of characters, at 30 frames per second.
+      For conceptual reasons the output is rendered as “text” inside a DOM element and not drawn as pixels on a graphics canvas (see the alternate “Canvas” renderer): this has some performance drawbacks but if managed with some care a smooth frame-rate can still be obtained, even in a fullscreen window.
+      See also this note about performance.
+    </p>
+    <p>
+      该API的灵感来自于GLSL编程/光栅化：不是考虑在画布上绘制几何图元，而是强制编写针对每个单元格调用的单个函数，这种方法与片段着色器并没有太大的不同。</br>
+
+      如果“片段”操作的数量较少，即使在（相对较慢的）JavaScript中也可以使用常见的着色器技术：在典型笔记本电脑屏幕上最大化浏览器窗口可以容纳约5-8000个等宽字符。即使在低性能计算机上也可以在每秒30帧的情况下对这些字符进行足够的计算。</br>
+
+      出于概念上的原因，输出被呈现为DOM元素内部的“文本”，而不是在图形画布上以像素形式绘制（请参见备用的“Canvas”渲染器）：这具有一些性能缺点，但如果小心管理，仍然可以获得平稳的帧率，即使在全屏窗口中也是如此。</br>
+    </p>
+    <h3>API: Modules</h3>
+    <p><strong>boot()</strong> 在第一个pre调用之前仅被调用一次；它可以用于在第一次渲染之前访问上下文信息（例如字体度量）.</p>
+    <p>
+      <strong>pre()</strong>在每个循环中的主函数调用之前仅被调用一次；它可以用于为渲染准备数据（例如位图，网络摄像头数据或鼠标指针的归一化）.
+    </p>
+    <p>
+      <strong>main()</strong>被调用一次用于每个单元格；这是为渲染器准备数据的主循环：它可以返回一个单字符（或一个对象）。
+    </p>
+    <p><strong>post()</strong>在pre和main之后每个循环调用一次，在渲染之前调用；它可以用于在缓冲区中覆盖数据（例如用于窗口叠加）。</p>
+    <p>这些函数的签名略有不同，main函数带有一个额外的参数；它也是唯一返回值的函数。所有参数都是可选的；有关描述，请参见下一章节。</p>
   </div>
 </body>
 </html>
