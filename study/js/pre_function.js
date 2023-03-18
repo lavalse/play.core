@@ -7,6 +7,11 @@ let circles = [];
 
 const n = 8;
 
+const density_1 = '#AB▄|/:÷×+-=?*· ';
+const density_2 = '▓目▄*◑÷×+=-·   ';
+let density = density_1;
+
+
 /// init circle
 const initCircle = ( x, y, r, speedX, speedY ) =>{
   const circle = {
@@ -68,6 +73,16 @@ export function pre(context, cursor, buffer, data){
 
   circles[0].x = cursor.x;
   circles[0].y = cursor.y;
+
+  if(context.frame % 300 === 150){
+    density = density_2;
+  }
+  if(context.frame % 300 === 0){
+    density = density_1;
+  }
+
+  // console.log(context.frame % 300);
+
 }
 
 //-------------------------main-----------------------------
@@ -76,7 +91,6 @@ export function main(coord, context, cursor, buffer) {
   const aspect = context.metrics.aspect
   const minAxis = Math.min(context.cols, context.rows)
   let union = 1; 
-  const density = '#AB▄|/:÷×+-=?*· '
 
   //convert all circles to sdcircle, then make a union
   for(let i=0; i<n; i++){
