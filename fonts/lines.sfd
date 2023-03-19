@@ -16,6 +16,8 @@ LayerCount: 2
 Layer: 0 0 "Back" 1
 Layer: 1 0 "Fore" 0
 XUID: [1021 398 1524010705 13037]
+StyleMap: 0x0000
+FSType: 0
 OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
@@ -25,7 +27,7 @@ OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
 OS2TypoDOffset: 1
-OS2TypoLinegap: 0
+OS2TypoLinegap: 22
 OS2WinAscent: 0
 OS2WinAOffset: 1
 OS2WinDescent: 0
@@ -34,7 +36,6 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
-OS2Vendor: 'PfEd'
 DEI: 91125
 Encoding: ISO8859-1
 UnicodeInterp: none
@@ -49,7 +50,7 @@ BeginChars: 256 4
 StartChar: A
 Encoding: 65 65 0
 Width: 115
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 SplineSet
@@ -59,12 +60,14 @@ SplineSet
  141.762695312 -38 37.7626953125 8 43.7626953125 90 c 0
  49.7626953125 172 80.7626953125 152 104.762695312 192 c 29
 EndSplineSet
+Validated: 524329
 EndChar
 
 StartChar: B
 Encoding: 66 66 1
 Width: 210
-Flags: HW
+Flags: W
+VStem: 3.98828 12<91.203 119.548>
 LayerCount: 2
 Fore
 SplineSet
@@ -75,12 +78,14 @@ SplineSet
  197.98828125 -54 3.98828125 18 3.98828125 104 c 0
  3.98828125 190 62.98828125 193 77.98828125 194 c 9
 EndSplineSet
+Validated: 524321
 EndChar
 
 StartChar: C
 Encoding: 67 67 2
 Width: 226
-Flags: HW
+Flags: W
+VStem: 194.527 24<31 128>
 LayerCount: 2
 Fore
 SplineSet
@@ -98,12 +103,14 @@ SplineSet
  200.52734375 152 157.52734375 172 112.52734375 168 c 0
  67.52734375 164 10.52734375 118 7.52734375 148 c 4
 EndSplineSet
+Validated: 524321
 EndChar
 
 StartChar: D
 Encoding: 68 68 3
 Width: 235
-Flags: HWO
+Flags: W
+VStem: 143.064 23<111.898 178.78>
 LayerCount: 2
 Fore
 SplineSet
@@ -126,6 +133,7 @@ SplineSet
  107.064453125 152 97.064453125 173 78.064453125 183 c 0
  59.064453125 193 41.064453125 194 20.064453125 186 c 9
 EndSplineSet
+Validated: 524325
 EndChar
 EndChars
 EndSplineFont
