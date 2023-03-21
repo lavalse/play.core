@@ -1,0 +1,127 @@
+SplineFontDB: 3.2
+FontName: Untitled2
+FullName: Untitled2
+FamilyName: Untitled2
+Weight: Regular
+Copyright: Copyright (c) 2023, laval
+UComments: "2023-3-21: Created with FontForge (http://fontforge.org)"
+Version: 001.000
+ItalicAngle: 0
+UnderlinePosition: -25
+UnderlineWidth: 13
+Ascent: 200
+Descent: 50
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 398 1524010705 9511]
+StyleMap: 0x0000
+FSType: 0
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1679390670
+ModificationTime: 1679392512
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 22
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+DEI: 91125
+Encoding: ISO8859-1
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -48
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 64 16 7
+BeginChars: 256 4
+
+StartChar: A
+Encoding: 65 65 0
+Width: 100
+Flags: W
+HStem: 0 21G<37.0488 61.2892> 180 20G<39.8644 56.8889>
+LayerCount: 2
+Fore
+SplineSet
+48 200 m 1
+ 100 83 l 1
+ 49 0 l 1
+ 0 82 l 1
+ 48 200 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: B
+Encoding: 66 66 1
+Width: 100
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+36 195 m 1
+ 93 180 l 25
+ 96 135 l 25
+ 47 115 l 1
+ 98 60 l 25
+ 96 8 l 1
+ 0 6 l 1
+ 0 180 l 1
+ 36 195 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: C
+Encoding: 67 67 2
+Width: 100
+Flags: W
+HStem: 180 20G<22 98.2381>
+LayerCount: 2
+Fore
+SplineSet
+63 200 m 1
+ 100 179 l 1
+ 100 161 l 25
+ 63 161 l 1
+ 31 80 l 1
+ 100 46 l 1
+ 96 3 l 1
+ 0 2 l 1
+ 22 182 l 1
+ 63 200 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: D
+Encoding: 68 68 3
+Width: 100
+Flags: W
+HStem: 0 21G<0 100> 180 20G<22.2222 80.9677>
+VStem: 0 100<16 149.875> 0 98<35.125 164>
+LayerCount: 2
+Fore
+SplineSet
+50 200 m 1xd0
+ 98 169 l 1xd0
+ 100 16 l 1xe0
+ 0 0 l 1
+ 0 164 l 1
+ 50 200 l 1xd0
+EndSplineSet
+Validated: 1
+EndChar
+EndChars
+EndSplineFont
