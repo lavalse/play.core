@@ -3,30 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>My Page</title>
+    <style type="text/css" media="screen">
+      html, body {
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+        line-height: 1.2;
+        font-family: 'Simple Console', monospace;
+      }
+      pre {
+        position: absolute;
+        margin:0;
+        padding:0;
+        left:0;
+        top:0;
+        width:100vw;
+        height:100vh;
+        font-family: inherit;
+        z-index: 1;
+      }
+      #myCanvas {
+        z-index: 10;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Simple noise</h1>
     <canvas id="myCanvas"></canvas>
+    <pre></pre>
     <script src="./js/simpleNoise.js"></script>
-    <script>
-      const seed = Date.now();
-      const [width, height] = [888, 222];
-      const canvas = document.getElementById("myCanvas");
-      const ctx = canvas.getContext("2d");
-      const imageData = ctx.createImageData(width, height);
-      const openSimplex = openSimplexNoise(seed);
-      const zoom = 8;
-      var x, y, index = 0;
-      for (y = 0; y < height; y++) {
-        for (x = 0; x < width; x++) {
-          const value = (openSimplex.noise2D(x / zoom, y / zoom) + 1) * 128;
-          imageData.data[index++] = value;
-          imageData.data[index++] = value;
-          imageData.data[index++] = value;
-          imageData.data[index++] = 255;
-        }
-      }
-      ctx.putImageData(imageData, 0, 0)
+    <script src="./js/use_noise.js"></script>
+    <script type="module">
+      import { run } from '/src/run.js'
+      import * as program from './js/use_noise_plus.js'
+      run(program, { element : document.querySelector('pre') }).then(function(e){
+        console.log(e)
+      }).catch(function(e) {
+        console.warn(e.message)
+        console.log(e.error)
+      })
     </script>
   </body>
 </html>
